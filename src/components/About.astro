@@ -1,0 +1,60 @@
+---
+const points = [
+  {
+    title: "Enfoque en la Familia",
+    text: "No somos solo datos, somos conexión. Trabajando para que tu familia crezca unida y con metas claras.",
+    icon: "M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm6-4a3 3 0 11-3-3m-12 3a3 3 0 103-3",
+    bg: "bg-teal-50 text-teal-700",
+  },
+  {
+    title: "Seguridad y Confianza",
+    text: "Tus datos y los de tus hijos son sagrados. Utilizamos encriptación de grado institucional para proteger lo más importante.",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+    bg: "bg-amber-500/15 text-amber-600",
+  },
+  {
+    title: "Escalabilidad Educativa",
+    text: "Desde preescolar hasta el último año. Saberé evoluciona junto con el ciclo escolar de tus hijos.",
+    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+    bg: "bg-blush-100 text-rose-500",
+  },
+];
+---
+
+<section id="familia" class="bg-white py-16 lg:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+    <div class="relative" data-reveal>
+      <div class="overflow-hidden rounded-3xl">
+        <!-- Foto: Vitaly Gariev / Unsplash -->
+        <img
+          src="/images/apoyo-tarea.webp"
+          alt="Madre apoyando a su hija mientras hace la tarea"
+          class="aspect-[4/5] w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <div data-reveal style="--reveal-delay: 150ms">
+      <h2 class="font-serif text-3xl font-semibold leading-snug text-ink-900 sm:text-4xl">
+        Más que una app, un
+        <span class="italic text-amber-600"> compañero de viaje.</span>
+      </h2>
+      <ul class="mt-10 space-y-8">
+        {points.map((p) => (
+          <li class="flex gap-4">
+            <span class={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${p.bg}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d={p.icon} />
+              </svg>
+            </span>
+            <div>
+              <h3 class="text-base font-semibold text-ink-900">{p.title}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-800/60">{p.text}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+# Saberé
+
+> Saberé es una plataforma de comunicación y gestión escolar para familias hispanohablantes. Conecta a los padres con la vida escolar de sus hijos: comunicación directa con maestros, calendario unificado de tareas, pagos escolares y seguimiento del progreso académico y emocional.
+
+## Qué es Saberé
+
+Saberé (https://sabereapp.com) es el puente que une la educación con el corazón del hogar. Está diseñado para que los padres vivan cada paso del crecimiento escolar de sus hijos con paz y claridad, sin perderse en cientos de correos y grupos de chat.
+
+## Funcionalidades principales
+
+- **Ahorro de tiempo**: centraliza toda la información escolar en una sola vista intuitiva, con calendario unificado de tareas y pagos en un solo click.
+- **Comunicación fluida**: conexión directa entre padres, maestros y directivos, sin barreras ni esperas.
+- **Comunidad Saberé**: talleres, artículos y recursos exclusivos para padres que quieren potenciar el aprendizaje en casa.
+- **Seguimiento real**: visualización del progreso académico y emocional de los hijos con gráficas amigables y claras.
+
+## Para quién es
+
+- Padres y madres de familia que quieren acompañar la educación de sus hijos desde preescolar hasta el último año escolar.
+- Colegios e instituciones educativas que buscan mejorar la comunicación con las familias.
+
+## Valores
+
+- Enfoque en la familia: conexión antes que datos.
+- Seguridad y confianza: encriptación de grado institucional para proteger los datos de los estudiantes.
+- Escalabilidad educativa: la plataforma evoluciona junto con el ciclo escolar de los hijos.
+
+## Enlaces
+
+- Sitio web: https://sabereapp.com
+- Instagram: https://www.instagram.com/sabere.app/
+- LinkedIn: https://www.linkedin.com/company/sabereapp/
+
+## Precios
+
+Cuenta gratuita disponible, sin tarjeta de crédito. Configuración en 5 minutos.

@@ -10,22 +10,100 @@
       Únete a miles de familias que ya están construyendo un futuro más
       conectado y organizado.
     </p>
-    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-      <a
-        href="#"
-        class="rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-teal-500 hover:shadow-lg"
-      >
-        Crear cuenta gratis
-      </a>
-      <a
-        href="#"
-        class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/60"
-      >
-        Hablar con soporte
-      </a>
-    </div>
+    <form id="contact-form" class="mx-auto mt-10 grid max-w-2xl gap-4 text-left sm:grid-cols-2">
+      <div class="sm:col-span-1">
+        <label for="cta-nombre" class="sr-only">Nombre</label>
+        <input
+          id="cta-nombre"
+          name="nombre"
+          type="text"
+          required
+          placeholder="Nombre completo"
+          class="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-teal-400 focus:bg-white/10"
+        />
+      </div>
+      <div class="sm:col-span-1">
+        <label for="cta-correo" class="sr-only">Correo</label>
+        <input
+          id="cta-correo"
+          name="correo"
+          type="email"
+          required
+          placeholder="Correo electrónico"
+          class="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-teal-400 focus:bg-white/10"
+        />
+      </div>
+      <div class="sm:col-span-1">
+        <label for="cta-telefono" class="sr-only">Teléfono</label>
+        <input
+          id="cta-telefono"
+          name="telefono"
+          type="tel"
+          placeholder="Teléfono"
+          class="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-teal-400 focus:bg-white/10"
+        />
+      </div>
+      <div class="sm:col-span-1">
+        <label for="cta-colegio" class="sr-only">Colegio</label>
+        <input
+          id="cta-colegio"
+          name="colegio"
+          type="text"
+          placeholder="Colegio"
+          class="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-teal-400 focus:bg-white/10"
+        />
+      </div>
+      <div class="sm:col-span-2">
+        <label for="cta-mensaje" class="sr-only">Mensaje</label>
+        <textarea
+          id="cta-mensaje"
+          name="mensaje"
+          rows="4"
+          required
+          placeholder="Cuéntanos qué necesitas"
+          class="w-full resize-none rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-teal-400 focus:bg-white/10"
+        ></textarea>
+      </div>
+      <div class="sm:col-span-2 flex justify-center">
+        <button
+          type="submit"
+          class="rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-teal-500 hover:shadow-lg"
+        >
+          Enviar mensaje
+        </button>
+      </div>
+    </form>
     <p class="mt-6 text-xs text-white/40">
-      No requiere tarjeta de crédito. Configuración en 5 minutos.
+      Te responderemos a la brevedad a contacto@sabereapp.com.
     </p>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(form);
+    const nombre = String(data.get("nombre") ?? "").trim();
+    const correo = String(data.get("correo") ?? "").trim();
+    const telefono = String(data.get("telefono") ?? "").trim();
+    const colegio = String(data.get("colegio") ?? "").trim();
+    const mensaje = String(data.get("mensaje") ?? "").trim();
+
+    const subject = `Contacto desde la web - ${nombre}`;
+    const body = [
+      `Nombre: ${nombre}`,
+      `Correo: ${correo}`,
+      `Teléfono: ${telefono || "No especificado"}`,
+      `Colegio: ${colegio || "No especificado"}`,
+      "",
+      "Mensaje:",
+      mensaje,
+    ].join("\n");
+
+    const mailtoLink = `mailto:contacto@sabereapp.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  });
+</script>
